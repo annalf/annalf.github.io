@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://annalf.github.io/2019/11/13/github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog/</loc>
+    
+    <lastmod>2021-05-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://annalf.github.io/about/index.html</loc>
     
     <lastmod>2021-05-17</lastmod>
@@ -26,34 +33,6 @@
     <loc>http://annalf.github.io/tags/index.html</loc>
     
     <lastmod>2021-05-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/2021/05/15/oracle11g-rac-%E5%85%B3%E9%97%AD%E5%BC%80%E5%90%AF%E5%BD%92%E6%A1%A3/</loc>
-    
-    <lastmod>2021-05-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/2021/05/15/win-11g-%E5%8D%95%E6%9C%BA-adg%E9%83%A8%E7%BD%B2/</loc>
-    
-    <lastmod>2021-05-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/2021/05/15/dbm-%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2021-05-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/</loc>
-    
-    <lastmod>2021-05-15</lastmod>
     
   </url>
   
@@ -95,54 +74,12 @@
 
   
   <url>
-    <loc>http://annalf.github.io/tags/dbm/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/tags/oralce/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/tags/adg/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/tags/hexo/</loc>
+    <loc>http://annalf.github.io/tags/%E9%9B%B6%E6%98%9F%E6%8A%80%E8%83%BD/</loc>
     <lastmod>2021-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
-  
-  <url>
-    <loc>http://annalf.github.io/categories/dbm/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/categories/oracle/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://annalf.github.io/categories/hexo/</loc>
-    <lastmod>2021-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset>
