@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;annalf.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="一、部署基础程序1、部署node.js​    下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;​    安装文件：node-v16.1.0-x64.msi​    部署目录：D:\hexo\nodejs​    安装修改下安装目录，其他全部默认即可​     2、部署git​    下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads​    安装文件：G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows10 部署hexo">
+<meta property="og:url" content="http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/index.html">
+<meta property="og:site_name" content="wangxf">
+<meta property="og:description" content="一、部署基础程序1、部署node.js​    下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;​    安装文件：node-v16.1.0-x64.msi​    部署目录：D:\hexo\nodejs​    安装修改下安装目录，其他全部默认即可​     2、部署git​    下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads​    安装文件：G">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/image-20210515124508335.png">
+<meta property="article:published_time" content="2021-05-15T01:53:21.000Z">
+<meta property="article:modified_time" content="2021-05-15T01:53:21.000Z">
+<meta property="article:author" content="wangxf">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/image-20210515124508335.png">
+
+
+<link rel="canonical" href="http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;annalf.github.io&#x2F;2021&#x2F;05&#x2F;15&#x2F;windows10-%E9%83%A8%E7%BD%B2hexo&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;15&#x2F;windows10-部署hexo&#x2F;&quot;,&quot;title&quot;:&quot;windows10 部署hexo&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>windows10 部署hexo | wangxf</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="wangxf" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">wangxf</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">一、部署基础程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、部署node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、部署git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、查看版本校验是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">二、部署hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、创建目录存放hexo相关文件和博客内容等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、安装hexo微博框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、创建博客文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">4、初始化hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">5、启动博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">6、登录hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">三、创建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、停止hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、编辑文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">4、发布blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">四、更换hexo主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、修改配置文件hexo根目录下的_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、更新主题（后期如果需要的话）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">4、安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">5、主题配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">6、修改语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">五、hexo博客front-matter格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、通用格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、修改创建文章时的固定模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">五、编辑界面Theme by cofess base on pure. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">六、blog中插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、配置md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、修改hexo根目录下_config.yml配置文件flase修改为true</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">六、部署hexo-admin插件管理hexo(没什么用)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、安装部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、启动hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">七、hexo后台启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1、配置脚本并配置开机自启动（需要开启cmd窗口）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">（1）、配置bat脚本如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">（2）、vbs脚本可以配置开机自启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">2、使用pm2（会弹出cmd窗口）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">（1）、安装pm2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">（2）、创建执行脚本pm2.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">（3）、运行脚本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">3、直接后台启动（不能关闭git bash窗口）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">(1)、直接后台启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">4、使用forever</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">(1)、安装forever</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">(2)、hexo家目录下常见js文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">(3)、启动forever</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">(4)、forever运行目录为</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">wangxf</p>
+  <div class="site-description" itemprop="description">hello word！</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://annalf.github.io/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wangxf">
+      <meta itemprop="description" content="hello word！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wangxf">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          windows10 部署hexo
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-15 09:53:21" itemprop="dateCreated datePublished" datetime="2021-05-15T09:53:21+08:00">2021-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2><span id="一-部署基础程序">一、部署基础程序</span></h2><h3><span id="1-部署nodejs">1、部署node.js</span></h3><p>​    下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>​    安装文件：node-v16.1.0-x64.msi<br>​    部署目录：D:\hexo\nodejs<br>​    安装修改下安装目录，其他全部默认即可<br>​    </p>
+<h3><span id="2-部署git">2、部署git</span></h3><p>​    下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>​    安装文件：Git-2.31.1-64-bit.exe<br>​    部署目录：D:\hexo\Git<br>​    安装修改下安装目录，其他全部默认即可<br>​    </p>
+<h3><span id="3-查看版本校验是否安装成功">3、查看版本校验是否安装成功</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\wangxf&gt;node -v</span><br><span class="line">v16.1.0</span><br><span class="line"></span><br><span class="line">C:\Users\wangxf&gt;npm -v</span><br><span class="line">npm notice</span><br><span class="line">npm notice New minor version of npm available! 7.11.2 -&gt; 7.13.0</span><br><span class="line">npm notice Changelog: https://github.com/npm/cli/releases/tag/v7.13.0</span><br><span class="line">npm notice Run npm install -g npm@7.13.0 to update!</span><br><span class="line">npm notice</span><br><span class="line">7.11.2</span><br><span class="line"></span><br><span class="line">C:\Users\wangxf&gt;git --version</span><br><span class="line">git version 2.31.1.windows.1</span><br><span class="line"></span><br><span class="line">C:\Users\wangxf&gt;node -v</span><br></pre></td></tr></table></figure>
+
+<h2><span id="二-部署hexo">二、部署hexo</span></h2><h3><span id="1-创建目录存放hexo相关文件和博客内容等">1、创建目录存放hexo相关文件和博客内容等</span></h3><p>本地目录：D:\hexo\data</p>
+<h3><span id="2-安装hexo微博框架">2、安装hexo微博框架</span></h3><p>在此目录下E:\AppDatas\blog右边空白处右键单击，选择Git Bash here，然后在命令行输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>测试是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-创建博客文件夹">3、创建博客文件夹</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\hexo\data\blog </span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-初始化hexo">4、初始化hexo</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后hexo的目录结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── node_modules：是依赖包</span><br><span class="line">├── public  #存放被解析markdown、html文件</span><br><span class="line">├── scaffolds #当您新建文章时，根据 scaffold生成文件</span><br><span class="line">├── source  #资源文件夹</span><br><span class="line">|   └── _posts #博客文章目录</span><br><span class="line">└── themes #主题</span><br><span class="line">├── _config.yml   #网站的配置信息。标题、网站名称等</span><br><span class="line">├── db.json：#source解析所得到的</span><br><span class="line">├── package.json  # 应用程序的配置信息</span><br></pre></td></tr></table></figure>
+
+<h3><span id="5-启动博客">5、启动博客</span></h3><p>hexo server，这里可以直接用简写为hexo s</p>
+<h3><span id="6-登录hexo">6、登录hexo</span></h3><p>浏览器输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
+<h2><span id="三-创建博客">三、创建博客</span></h2><h3><span id="1-停止hexo">1、停止hexo</span></h3><p>ctrl+c 即可</p>
+<h3><span id="2-创建文章">2、创建文章</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ hexo n &quot;windows10 部署hexo本地博客&quot;</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\hexo\data\blog\source\_posts\windows10-部署hexo本地博客.md</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-编辑文章">3、编辑文章</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ cd source/_posts/</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog/source/_posts</span><br><span class="line">$ vim windows10-部署hexo本地博客.md</span><br><span class="line"></span><br><span class="line">:wq保存退出</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-发布blog">4、发布blog</span></h3><p>cd至家目录<br>先清理一下:    hexo clean<br>然后生成一下（对应英文hexo generate）:    hexo g<br>重启：hexo s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog/source/_posts</span><br><span class="line">$ cd ../../</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ hexo clean</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ hexo g</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<h2><span id="四-更换hexo主题">四、更换hexo主题</span></h2><p>pure主题：<a target="_blank" rel="noopener" href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html">https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html</a><br>中文说明文档：<a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure/blob/master/README.cn.md">https://github.com/cofess/hexo-theme-pure/blob/master/README.cn.md</a></p>
+<h3><span id="1-下载主题">1、下载主题</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ git clone https://github.com/cofess/hexo-theme-pure.git themes/pure</span><br><span class="line">Cloning into &#x27;themes/pure&#x27;...</span><br><span class="line">remote: Enumerating objects: 3392, done.</span><br><span class="line">remote: Counting objects: 100% (7/7), done.</span><br><span class="line">remote: Compressing objects: 100% (6/6), done.</span><br><span class="line">remote: Total 3392 (delta 0), reused 1 (delta 0), pack-reused 3385</span><br><span class="line">Receiving objects: 100% (3392/3392), 4.59 MiB | 34.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (1892/1892), done.</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-修改配置文件hexo根目录下的_configyml文件">2、修改配置文件hexo根目录下的_config.yml文件</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ vi _config.yml</span><br><span class="line"></span><br><span class="line">theme: pure</span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-更新主题后期如果需要的话">3、更新主题（后期如果需要的话）</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ cd themes/pure/</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog/themes/pure (master)</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-安装插件">4、安装插件</span></h3><p>hexo-wordcount</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+
+<p>hexo-generator-json-content</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
+
+<p>hexo-generator-feed</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>hexo-generator-sitemap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>hexo-generator-baidu-sitemap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<h3><span id="5-主题配置">5、主题配置</span></h3><p>编辑主题根目录下的_config.yml文件即可</p>
+<p>注意事项:<br>    1、所有配置项分号后面必须添加空格</p>
+<h3><span id="6-修改语言">6、修改语言</span></h3><p>​    查看该主题支持哪些语言：D:\hexo\data\blog\themes\pure\languages<br>​    修改文件:D:\hexo\data\blog_config.yml文件中language: default</p>
+<h2><span id="五-hexo博客front-matter格式">五、hexo博客front-matter格式</span></h2><h3><span id="1-通用格式">1、通用格式</span></h3><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。<br>参数                        描述                                        默认值<br>layout                        布局<br>title                            标题                                        文章的文件名<br>date                            建立日期                                文件建立日期<br>updated                        更新日期                                文件更新日期<br>comments                    开启文章的评论功能                true<br>tags                            标签（不适用于分页）<br>categories                    分类（不适用于分页）<br>permalink                    覆盖文章网址</p>
+<p>matery主题的相关详细格式<br>针对本站的matery主题的相关选项介绍</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line">date: 2020-02-29 16:00:00</span><br><span class="line">summary: # 文章摘要</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br><span class="line">top: true</span><br><span class="line">cover: true</span><br><span class="line">abbrlink: 213245 # 自己可随意设置</span><br><span class="line">img: &#x27;https://img-blog.csdnimg.cn/20200309120551356.png&#x27; # 设置文章背景图，设置为外链图片，访问快</span><br><span class="line">tags:</span><br><span class="line">  - 算法</span><br><span class="line">  - 计算机知识</span><br><span class="line">categories:</span><br><span class="line">  - 算法</span><br><span class="line">author: # 设置文章作者</span><br><span class="line">password: # 设置密码（yml中开启相应功能）</span><br><span class="line">coverImg: # 轮播图片</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-修改创建文章时的固定模板">2、修改创建文章时的固定模板</span></h3><p>一般我们在通过以下命令创建文章时，采用的是默认的模板，我们可以对默认的模板进行修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new “文章的标题”</span><br></pre></td></tr></table></figure>
+
+<p>修改/scaffolds/post.md文件即可,修改如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">updated: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: </span><br><span class="line">  - 待分类</span><br><span class="line">  - </span><br><span class="line">tags: </span><br><span class="line">  - 待标签</span><br><span class="line">  - </span><br><span class="line">toc: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2><span id="五-编辑界面theme-by-cofess-base-on-pure-问题">五、编辑界面Theme by cofess base on pure. 问题</span></h2><p>按F12可以调整这部分编码但是重新生成代码后会覆盖</p>
+<h2><span id="六-blog中插入图片">六、blog中插入图片</span></h2><h3><span id="1-安装插件">1、安装插件</span></h3><p>直接安装hexo-asset-image插件，会导致路径引用问题，使图片无法显示，所以需要安装修改好的包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-配置md">2、配置md</span></h3><p>文件-偏好设置-图像<br><img src="/2021/05/15/windows10-%E9%83%A8%E7%BD%B2hexo/image-20210515124508335.png" alt="image-20210515124508335"></p>
+<h3><span id="3-修改hexo根目录下_configyml配置文件flase修改为true">3、修改hexo根目录下_config.yml配置文件flase修改为true</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="六-部署hexo-admin插件管理hexo没什么用">六、部署hexo-admin插件管理hexo(没什么用)</span></h2><h3><span id="1-安装部署">1、安装部署</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admin --save</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-启动hexo">2、启动hexo</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s </span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-登录">2、登录</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/admin</span><br></pre></td></tr></table></figure>
+
+<h2><span id="七-hexo后台启动">七、hexo后台启动</span></h2><h3><span id="1-配置脚本并配置开机自启动需要开启cmd窗口">1、配置脚本并配置开机自启动（需要开启cmd窗口）</span></h3><h4><span id="1-配置bat脚本如下">（1）、配置bat脚本如下</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:</span><br><span class="line">cd D:\hexo\data\blog</span><br><span class="line">hexo s -p 666</span><br></pre></td></tr></table></figure>
+
+<h4><span id="2-vbs脚本可以配置开机自启动">（2）、vbs脚本可以配置开机自启动</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set ws=WScript.CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">ws.Run &quot;E:\\WorkSpace\\webProject\\Hexo-blog\\hexo-server.bat /start&quot;,0</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-使用pm2会弹出cmd窗口">2、使用pm2（会弹出cmd窗口）</span></h3><h4><span id="1-安装pm2">（1）、安装pm2</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
+
+<h4><span id="2-创建执行脚本pm2js">（2）、创建执行脚本pm2.js</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//pm2.js</span><br><span class="line">const &#123; exec &#125; = require(&#x27;child_process&#x27;)</span><br><span class="line">exec(&#x27;hexo server -p 666&#x27;,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">  if(error)&#123;</span><br><span class="line">    console.log(`exec error: $&#123;error&#125;`)</span><br><span class="line">    return</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(`stdout: $&#123;stdout&#125;`);</span><br><span class="line">  console.log(`stderr: $&#123;stderr&#125;`);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4><span id="3-运行脚本">（3）、运行脚本</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">pm2 start pm2.js</span><br><span class="line">pm2 stop pm2.js</span><br><span class="line">pm2 status pm2.js</span><br><span class="line"></span><br><span class="line">pm2 delete pm2</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ pm2 start pm2.js</span><br><span class="line">[PM2] Starting D:\hexo\data\blog\pm2.js in fork_mode (1 instance)</span><br><span class="line">[PM2] Done.</span><br><span class="line">┌─────┬────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐</span><br><span class="line">│ id  │ name   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │</span><br><span class="line">├─────┼────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤</span><br><span class="line">│ 0   │ pm2    │ default     │ 0.0.0   │ fork    │ 20808    │ 0s     │ 0    │ online    │ 0%       │ 29.7mb   │ wangxf   │ disabled │</span><br><span class="line">└─────┴────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ pm2 list</span><br><span class="line">┌─────┬────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐</span><br><span class="line">│ id  │ name   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │</span><br><span class="line">├─────┼────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤</span><br><span class="line">│ 0   │ pm2    │ default     │ 0.0.0   │ fork    │ 20808    │ 16s    │ 0    │ online    │ 0%       │ 26.2mb   │ wangxf   │ disabled │</span><br><span class="line">└─────┴────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ pm2 stop all</span><br><span class="line">[PM2] Applying action stopProcessId on app [all](ids: [ 0 ])</span><br><span class="line">[PM2] [pm2](0) ✓</span><br><span class="line">┌─────┬────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐</span><br><span class="line">│ id  │ name   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │</span><br><span class="line">├─────┼────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤</span><br><span class="line">│ 0   │ pm2    │ default     │ 0.0.0   │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ wangxf   │ disabled │</span><br><span class="line">└─────┴────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-直接后台启动不能关闭git-bash窗口">3、直接后台启动（不能关闭git bash窗口）</span></h3><h4><span id="1-直接后台启动">(1)、直接后台启动</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 666 &amp;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-使用forever">4、使用forever</span></h3><h4><span id="1-安装forever">(1)、安装forever</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g forever</span><br></pre></td></tr></table></figure>
+
+<h4><span id="2-hexo家目录下常见js文件">(2)、hexo家目录下常见js文件</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&#x27;hexo&#x27;).init(&#123;command: &#x27;server -p 666&#x27;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4><span id="3-启动forever">(3)、启动forever</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ forever start forever-hexo.js</span><br><span class="line">warn:    --minUptime not set. Defaulting to: 1000ms</span><br><span class="line">warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms</span><br><span class="line">info:    Forever processing file: forever-hexo.js</span><br><span class="line">(node:932) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:932) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ forever list</span><br><span class="line">(node:12892) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:12892) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">info:    Forever processes running</span><br><span class="line">data:        uid  command                   script                            forever pid   id logfile                           uptime</span><br><span class="line">data:    [0] WsBQ &quot;D:\hexo\nodejs\node.exe&quot; D:\hexo\data\blog\forever-hexo.js 15644   21624    C:\Users\wangxf\.forever\WsBQ.log 0:0:0:0.091</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ forever stop forever-hexo.js</span><br><span class="line">(node:16672) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:16672) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">error:   Forever cannot find process with id: forever-hexo.js</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$ forever list</span><br><span class="line">(node:7584) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:7584) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency</span><br><span class="line">info:    No forever processes running</span><br><span class="line"></span><br><span class="line">wangxf@wangxf MINGW64 /d/hexo/data/blog</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<h4><span id="4-forever运行目录为">(4)、forever运行目录为</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\wangxf\.forever</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/15/dbm-%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/" rel="next" title="dbm 部署使用">
+                  dbm 部署使用 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wangxf</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
